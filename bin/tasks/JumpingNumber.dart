@@ -5,8 +5,10 @@ String jumpingNumber(int n) {
   if (n < 10) return "Jumping!!";
   var numbers = n.toString().split('');
   for (int i = 0; i < numbers.length - 1; i++)
-    if ((int.parse(numbers[i]) - int.parse(numbers[i + 1])).abs() == 1) continue;
-    else return "Not!!";
+    if ((int.parse(numbers[i]) - int.parse(numbers[i + 1])).abs() == 1)
+      continue;
+    else
+      return "Not!!";
   return "Jumping!!";
 }
 
