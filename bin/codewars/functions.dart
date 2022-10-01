@@ -46,3 +46,12 @@ int add(int num1, int num2) {
 
   return int.parse(digits.join('').toString());
 }
+
+int getCount(String inputStr) => inputStr.isEmpty
+    ? 0
+    : inputStr
+        .split('')
+        .map((e) => 'aeiou'.contains(e) ? 1 : 0)
+        .reduce((e1, e2) => e1 + e2);
+
+consecutiveDucks(int n) => n > 3 && n & (n - 1) != 0;
